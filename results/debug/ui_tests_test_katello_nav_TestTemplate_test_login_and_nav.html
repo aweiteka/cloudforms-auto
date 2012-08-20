@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="image/vnd.microsoft.icon" rel="shortcut icon" href="/katello/images/favicon.png?1243891069" />
+<title>
+CloudForms System Engine
+-
+Systems Management
+</title>
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link type="text/css" rel="stylesheet" media="screen" href="/katello/assets/common-datauri.css?1340257794" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/katello/assets/common-mhtml.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link type="text/css" rel="stylesheet" media="screen" href="/katello/assets/generic-datauri.css?1340257794" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/katello/assets/generic-mhtml.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="/katello/assets/html5.js?1340257794" type="text/javascript"></script>
+<![endif]-->
+<!--[if IE]>
+<link href="/katello/assets/ie.css?1340257794" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body id="generic">
+<div id="head" class="container_16">
+<header>
+<div class="grid_6">
+<a class="logo" href="/katello/dashboard"><img src="/katello/images/rh-logo.png?1243891069" alt="CloudForms System Engine Logo" />
+<span class="pipe"></span>
+<h1>CloudForms System Engine</h1>
+</a><div id="loading" class="fr">
+<img width="20" height="20" src="/katello/images/rh_spinner_head.gif?1340257794" alt="Spinning Work Indicator" />
+</div>
+</div>
+<div class="grid_10">
+<input type="hidden" name="root_url" id="root_url" data-url="/katello/" />
+<input type="hidden" name="get_notices_url" id="get_notices_url" data-url="/katello/notices/get_new" />
+<div class="org">
+<!-- orgbox Starts Here -->
+<div id="switcherContainer">
+<a id="switcherButton">
+<div>ACME_Corporation</div>
+<div class="arrow_icon"></div>
+</a>
+<div style="clear:both"></div>
+<div id="switcherBox">
+<div id="switcherForm">
+<div id="orgfilter">
+<form class="filter">
+<input type="input" placeholder="Filter..." name="f" id="orgfilter_input" />
+<button class="filter_button">Filter</button>
+</form>
+</div>
+<div id="orgbox" data-url="/katello/user_session/allowed_orgs">
+<!-- Orgs pulled from above data-url dynamically each click. -->
+<img src="/katello/images/spinner.gif?1340257794" alt="Spinner" />
+</div>
+</div>
+</div>
+</div>
+<!-- orgbox Ends Here -->
+
+</div>
+<ul>
+<li class="hello">
+<a href="/katello/users?id=1&amp;only=true#panel=user_1"><strong>
+admin
+</strong>
+</a></li>
+<li>
+<a title="System Notifications" id="unread_notices" href="/katello/notices">229</a>
+</li>
+<li class="logout">
+<a rel="nofollow" data-method="POST" href="/katello/logout">Logout</a>
+</li>
+</ul>
+</div>
+
+</header>
+</div>
+<div id="subheader" class="container_16">
+<nav class="tab_nav">
+<ul><li id="dashboard" data-menu="dashboard" class="dashboard top_level"><a href="/katello/dashboard">Dashboard</a></li><li id="content" data-menu="content" class="content top_level"><a href="/katello/providers">Content Management</a></li><li id="systems" data-menu="systems" class="systems top_level"><a href="/katello/systems">Systems</a></li><li id="organizations" data-menu="organizations" class="organizations top_level"><a href="/katello/organizations">Organizations</a></li><li id="admin" data-menu="operations" class="operations top_level"><a href="/katello/users">Administration</a></li></ul>
+</nav>
+</div>
+<div id="maincontent" class="container_16">
+<nav id="subnav" class="subnav container_16"><ul style="display: none;"><li id="users" data-menu="operations" class="operations second_level"><a href="/katello/users">Users</a></li><li id="roles" data-menu="operations" class="operations second_level"><a href="/katello/roles">Roles</a></li></ul><ul style="display: none;"><li id="org_list" data-menu="organizations" class="organizations second_level"><a href="/katello/organizations">List</a></li><li id="subscriptions" data-menu="organizations" class="organizations second_level"><a href="/katello/subscriptions">Subscriptions</a></li></ul><ul style="display: none;"><li id="registered" data-menu="systems" class="systems second_level"><a href="/katello/systems">All</a></li><li id="env" data-menu="systems" class="systems second_level"><a href="/katello/systems/environments">By Environments</a></li><li id="activation_keys" data-menu="systems" class="systems second_level"><a href="/katello/activation_keys">Activation Keys</a></li></ul><ul style="display: none;"><li id="providers" data-menu="content" class="content second_level"><div class="arrow_icon_menu"></div><a href="/katello/providers">Content Providers</a><ul><li id="custom_providers" class="third_level"><a href="/katello/providers">Custom Content Providers</a></li><li id="redhat_providers" class="third_level"><a href="/katello/providers/redhat_provider">Red Hat Content Provider</a></li><li id="filters" class="third_level"><a href="/katello/filters">Package Filters</a></li><li id="gpg" class="third_level"><a href="/katello/gpg_keys">GPG Keys</a></li></ul></li><li id="sync_mgmt" data-menu="content" class="content second_level"><div class="arrow_icon_menu"></div><a href="/katello/sync_management/index">Sync Management</a><ul><li id="sync_status" class="third_level"><a href="/katello/sync_management/index">Sync Status</a></li><li id="sync_plans" class="third_level"><a href="/katello/sync_plans">Sync Plans</a></li><li id="sync_schedule" class="third_level"><a href="/katello/sync_schedules/index">Sync Schedule</a></li></ul></li><li id="system_templates" data-menu="content" class="content second_level"><a href="/katello/system_templates">System Templates</a></li><li id="promotions" data-menu="content" class="content second_level"><a href="/katello/promotions">Promotions</a></li><li id="changeset" data-menu="content" class="content second_level"><a href="/katello/changesets">Promotion Changeset History</a></li></ul>
+
+</nav>
+<div class="inner container_16">
+<div class="grid_16">
+<h1>404 - That page doesn't exist or is missing!</h1>
+<p>You may have mistyped the address or the page may have moved.</p>
+<p>
+<a href="/katello/">Back</a>
+</p>
+</div>
+
+</div>
+</div>
+<footer>
+<ul class="container_16">
+<li>
+<a rel="nofollow" data-method="POST" href="/katello/logout">Logout</a>
+</li>
+<li>
+Copyright © 2012 Red Hat, Inc.
+</li>
+</ul>
+<div class="grid_16 ca light_text">
+CloudForms System Engine Version: 0.1.318-1.el6cf
+
+</div>
+
+</footer>
+<script type="text/javascript" src="/katello/assets/common.js?1340257794"></script>
+<script>
+  //&lt;![CDATA[
+    KT.config = {
+      'root_url'  : '/katello/'
+    };
+    KT.routes.options.prefix = KT.config['root_url'];
+  //]]&gt;
+</script>
+
+
+
+
+
+<!-- common translations -->
+<script>
+  //&lt;![CDATA[
+    localize({
+      "confirm_request": 'Are you sure?',
+      "validation_errors": 'Validation Failed:',
+      "add": '+ Add',
+      "add_plus": '+ Add',
+      "remove": 'Remove',
+      "items_selected": ' items selected.',
+      "yes": 'Yes',
+      "no": 'No',
+      "ok": 'Ok',
+      "alert": 'Alert',
+      "confirmation": 'Confirmation',
+      "error": 'Error',
+      "row_error": 'There was an error retrieving that row:',
+      "add_all": 'Add All',
+      "remove_all": 'Remove All',
+    });
+  //]]&gt;
+</script>
+
+
+
+<script type="text/javascript" src="/katello/assets/notices.js?1340257794"></script><script>
+  //&lt;![CDATA[
+    $(document).ready(function(){
+      notices.setup_notices(120000);
+      notices.addNotices($.parseJSON( "{\"new_notices\":[]}"   ));
+    });
+  //]]&gt;
+</script>
+
+<!-- translations needed for jeditable -->
+<script>
+  //&lt;![CDATA[
+    localize({
+      "cancel": 'Cancel',
+      "upload": 'Upload',
+      "uploading": 'Uploading',
+      "clickToEdit": 'Click to edit',
+      "save": 'Save',
+      "saving": 'Saving...',
+      "close": 'Close'
+    });
+  //]]&gt;
+</script>
+
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="ARL3YF+P2Xvt5IOKiS28pirYbMIZ0t4A8I8GyfwJGV4=" name="csrf-token" />
+<script type="text/javascript">
+//&lt;![CDATA[
+var AUTH_TOKEN = "ARL3YF+P2Xvt5IOKiS28pirYbMIZ0t4A8I8GyfwJGV4=";
+//]]&gt;
+</script>
+
+
+<a id="toTop" href="#" style="display: none;"><span id="toTopHover"></span>To Top</a></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="994" height="720"></canvas></html>

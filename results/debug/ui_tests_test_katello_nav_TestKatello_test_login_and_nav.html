@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="image/vnd.microsoft.icon" rel="shortcut icon" href="/katello/images/favicon.png?1243891069" />
+<title>
+CloudForms System Engine
+-
+Systems Management
+</title>
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link type="text/css" rel="stylesheet" media="screen" href="/katello/assets/common-datauri.css?1340257794" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/katello/assets/common-mhtml.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link type="text/css" rel="stylesheet" media="screen" href="/katello/assets/operations-datauri.css?1340257794" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/katello/assets/operations-mhtml.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if (!IE)|(gte IE 8)]><!-->
+<link type="text/css" rel="stylesheet" media="screen" href="/katello/assets/fancyqueries-datauri.css?1340257794" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/katello/assets/fancyqueries-mhtml.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/katello/assets/html5.js?1340257794" type="text/javascript"></script>
+<![endif]-->
+<!--[if IE]>
+<link href="/katello/assets/ie.css?1340257794" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body id="operations" style="cursor: default;">
+<div id="head" class="container_16">
+<header>
+<div class="grid_6">
+<a class="logo" href="/katello/dashboard"><img src="/katello/images/rh-logo.png?1243891069" alt="CloudForms System Engine Logo" />
+<span class="pipe"></span>
+<h1>CloudForms System Engine</h1>
+</a><div id="loading" class="fr" style="display: none;">
+<img width="20" height="20" src="/katello/images/rh_spinner_head.gif?1340257794" alt="Spinning Work Indicator" />
+</div>
+</div>
+<div class="grid_10">
+<input type="hidden" name="root_url" id="root_url" data-url="/katello/" />
+<input type="hidden" name="get_notices_url" id="get_notices_url" data-url="/katello/notices/get_new" />
+<div class="org">
+<!-- orgbox Starts Here -->
+<div id="switcherContainer">
+<a id="switcherButton">
+<div>ACME_Corporation</div>
+<div class="arrow_icon"></div>
+</a>
+<div style="clear:both"></div>
+<div id="switcherBox">
+<div id="switcherForm">
+<div id="orgfilter">
+<form class="filter">
+<input type="input" placeholder="Filter..." name="f" id="orgfilter_input" />
+<button class="filter_button">Filter</button>
+</form>
+</div>
+<div id="orgbox" data-url="/katello/user_session/allowed_orgs">
+<!-- Orgs pulled from above data-url dynamically each click. -->
+<img src="/katello/images/spinner.gif?1340257794" alt="Spinner" />
+</div>
+</div>
+</div>
+</div>
+<!-- orgbox Ends Here -->
+
+</div>
+<ul>
+<li class="hello">
+<a href="/katello/users?id=1&amp;only=true#panel=user_1"><strong>
+admin
+</strong>
+</a></li>
+<li>
+<a title="System Notifications" id="unread_notices" href="/katello/notices">358</a>
+</li>
+<li class="logout">
+<a rel="nofollow" data-method="POST" href="/katello/logout">Logout</a>
+</li>
+</ul>
+</div>
+
+</header>
+</div>
+<div id="subheader" class="container_16">
+<nav class="tab_nav">
+<ul><li id="dashboard" data-menu="dashboard" class="dashboard top_level"><a href="/katello/dashboard">Dashboard</a></li><li id="content" data-menu="content" class="content top_level"><a href="/katello/providers">Content Management</a></li><li id="systems" data-menu="systems" class="systems top_level"><a href="/katello/systems">Systems</a></li><li id="organizations" data-menu="organizations" class="organizations top_level"><a href="/katello/organizations">Organizations</a></li><li id="admin" data-menu="operations" class="operations top_level selected active"><a class="selected" href="/katello/users">Administration</a></li></ul>
+</nav>
+</div>
+<div id="maincontent" class="container_16">
+<nav id="subnav" class="subnav container_16"><ul style="display: none;"><li id="org_list" data-menu="organizations" class="organizations second_level"><a href="/katello/organizations">List</a></li><li id="subscriptions" data-menu="organizations" class="organizations second_level"><a href="/katello/subscriptions">Subscriptions</a></li></ul><ul style="display: none;"><li id="registered" data-menu="systems" class="systems second_level"><a href="/katello/systems">All</a></li><li id="env" data-menu="systems" class="systems second_level"><a href="/katello/systems/environments">By Environments</a></li><li id="activation_keys" data-menu="systems" class="systems second_level"><a href="/katello/activation_keys">Activation Keys</a></li></ul><ul style="display: none;"><li id="providers" data-menu="content" class="content second_level"><div class="arrow_icon_menu"></div><a href="/katello/providers">Content Providers</a><ul><li id="custom_providers" class="third_level"><a href="/katello/providers">Custom Content Providers</a></li><li id="redhat_providers" class="third_level"><a href="/katello/providers/redhat_provider">Red Hat Content Provider</a></li><li id="filters" class="third_level"><a href="/katello/filters">Package Filters</a></li><li id="gpg" class="third_level"><a href="/katello/gpg_keys">GPG Keys</a></li></ul></li><li id="sync_mgmt" data-menu="content" class="content second_level"><div class="arrow_icon_menu"></div><a href="/katello/sync_management/index">Sync Management</a><ul><li id="sync_status" class="third_level"><a href="/katello/sync_management/index">Sync Status</a></li><li id="sync_plans" class="third_level"><a href="/katello/sync_plans">Sync Plans</a></li><li id="sync_schedule" class="third_level"><a href="/katello/sync_schedules/index">Sync Schedule</a></li></ul></li><li id="system_templates" data-menu="content" class="content second_level"><a href="/katello/system_templates">System Templates</a></li><li id="promotions" data-menu="content" class="content second_level"><a href="/katello/promotions">Promotions</a></li><li id="changeset" data-menu="content" class="content second_level"><a href="/katello/changesets">Promotion Changeset History</a></li></ul>
+<ul><li id="users" data-menu="operations" class="operations second_level"><a href="/katello/users">Users</a></li><li id="roles" data-menu="operations" class="operations second_level selected"><a class="selected" href="/katello/roles">Roles</a></li></ul>
+</nav>
+<div class="inner container_16">
+<div class="grid_16">
+
+
+<div id="container">
+<div class="right" style="width: 598px;">
+<div class="helptip_area">
+<div style="" id="helptip-closed_panel-help" data-url="/katello/users/enable_helptip" class="helptip-close">
+<div class="helptip-open-button">
+ 
+</div>
+</div>
+
+<div style="display: none;" id="helptip-opened_panel-help" data-url="/katello/users/disable_helptip" class="helptip-open">
+<div class="helptip-close-button"></div>
+<p>
+To view the details of an item on the left, simply click on a single row.<br /><br />To select multiple rows, hold the Control Key and click multiple rows.<br /><br />If you don't need this help anymore, please click the close button in the top right of this box.
+</p>
+</div>
+
+</div>
+<div class="fl clear">
+<div data-id="select_none" class="panel_action disabled">
+<div id="select-result" style="">0 items selected.</div>
+<a id="select-none">Select None</a>
+</div>
+</div>
+</div>
+<div id="panel-frame">
+<div id="panel" class="closed panel" style="width: 640px;">
+<div class="data">
+<div class="spinner">
+<img src="/katello/images/spinner.gif?1340257794" alt="Spinner" />
+</div>
+<div class="panel-content"></div>
+</div>
+</div>
+<div id="subpanel" class="panel subpanel closed" style="width: 640px;">
+<div class="data">
+<div class="spinner">
+<img src="/katello/images/spinner.gif?1340257794" alt="Spinner" />
+</div>
+<div class="panel-content"></div>
+</div>
+</div>
+</div>
+
+<div class="column_panel_1 left ui-resizable-autohide">
+<div id="list-title" style="width: 300px;">
+<header>
+<h2 class="fl">Roles</h2>
+<a id="new" href="#" data-ajax_url="/katello/roles/new" class="block fr">
++ New Role
+<div class="arrow-right"></div>
+</a>
+</header>
+<div id="items_count" class="fl clear">
+Viewing <span id="current_items_count">8</span> of <span id="total_results_count">8</span> results (<span id="total_items_count">8</span> Total Roles)
+</div>
+<form id="search_form" data-url="/katello/search" class="search">
+<input type="text" placeholder="Search..." name="search" id="search" class="auto_complete_input ui-autocomplete-input" style="margin-left: 24px; width: 191px;" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+<button id="search_button" form="search_form" class="action">Search</button>
+<div class="qdropdown" style="display: none;"></div><div class="queries" data-url="/katello/search"><span class="arrow"></span></div></form>
+</div>
+<div id="list" data-scroll_url="/katello/roles/items" data-page_size="25" class="ajaxScroll clear expand_list list">
+<header>
+<div class="block_head clear">
+<div class="column_1">
+Name
+</div>
+</div>
+</header>
+<div class="spinner" style="display: none;">
+<img src="/katello/images/spinner.gif?1340257794" alt="Spinner" />
+</div>
+<section class="hidden" style="display: block;"><div id="role_1" data-ajax_url="/katello/roles/1/edit" class="block tall">
+<div class="column_1">
+<span class="lock_icon fl"></span>
+<span>
+Administrator
+</span>
+</div>
+</div>
+<div id="role_21" data-ajax_url="/katello/roles/21/edit" class="block tall">
+<div class="column_1">
+<span>
+nuthin
+</span>
+</div>
+</div>
+<div id="role_6" data-ajax_url="/katello/roles/6/edit" class="block tall">
+<div class="column_1">
+<span>
+oa_redhat_role
+</span>
+</div>
+</div>
+<div id="role_2" data-ajax_url="/katello/roles/2/edit" class="block tall">
+<div class="column_1">
+<span class="lock_icon fl"></span>
+<span>
+Read Everything
+</span>
+</div>
+</div>
+<div id="role_7" data-ajax_url="/katello/roles/7/edit" class="block tall">
+<div class="column_1">
+<span>
+sa_common_role
+</span>
+</div>
+</div>
+<div id="role_9" data-ajax_url="/katello/roles/9/edit" class="block tall">
+<div class="column_1">
+<span>
+sa_dev_role
+</span>
+</div>
+</div>
+<div id="role_13" data-ajax_url="/katello/roles/13/edit" class="block tall">
+<div class="column_1">
+<span>
+sa_prod_role
+</span>
+</div>
+</div>
+<div id="role_11" data-ajax_url="/katello/roles/11/edit" class="block tall">
+<div class="column_1">
+<span>
+sa_test_role
+</span>
+</div>
+</div>
+
+</section>
+</div>
+<br class="clear" />
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<footer>
+<ul class="container_16">
+<li>
+<a rel="nofollow" data-method="POST" href="/katello/logout">Logout</a>
+</li>
+<li>
+Copyright © 2012 Red Hat, Inc.
+</li>
+</ul>
+<div class="grid_16 ca light_text">
+CloudForms System Engine Version: 0.1.318-1.el6cf
+
+</div>
+
+</footer>
+<script type="text/javascript" src="/katello/assets/common.js?1340257794"></script>
+<script>
+  //&lt;![CDATA[
+    KT.config = {
+      'root_url'  : '/katello/'
+    };
+    KT.routes.options.prefix = KT.config['root_url'];
+  //]]&gt;
+</script>
+
+
+
+
+
+<!-- common translations -->
+<script>
+  //&lt;![CDATA[
+    localize({
+      "confirm_request": 'Are you sure?',
+      "validation_errors": 'Validation Failed:',
+      "add": '+ Add',
+      "add_plus": '+ Add',
+      "remove": 'Remove',
+      "items_selected": ' items selected.',
+      "yes": 'Yes',
+      "no": 'No',
+      "ok": 'Ok',
+      "alert": 'Alert',
+      "confirmation": 'Confirmation',
+      "error": 'Error',
+      "row_error": 'There was an error retrieving that row:',
+      "add_all": 'Add All',
+      "remove_all": 'Remove All',
+    });
+  //]]&gt;
+</script>
+
+
+
+<script type="text/javascript" src="/katello/assets/panel.js?1340257794"></script><script type="text/javascript" src="/katello/assets/fancyqueries.js?1340257794"></script><script type="text/javascript" src="/katello/assets/form.js?1340257794"></script><script>
+  //&lt;![CDATA[
+    KT.panel_search_autocomplete = $.parseJSON('[\"description:\",\"name:\",\"permissions:\"]');
+  //]]&gt;
+</script>
+
+<script type="text/javascript" src="/katello/assets/edit.js?1340257794"></script><script type="text/javascript" src="/katello/assets/role.js?1340257794"></script><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 3; top: 0px; left: 0px; display: none;"></ul><script>
+  //&lt;![CDATA[
+    localize({
+      "add_permission"                    : 'Add Permission',
+      "close_add_permission"              : 'Close Add Permission',
+      "edit_permission"                   : 'Edit Permission',
+      "close_edit_permission"             : 'Close Edit Permission',
+      "edit_permission_header"            : 'Edit Permission in',
+      "remove"                            : 'Remove',
+      "all"                               : '+ All',
+      "add"                               : '+ Add',
+      "rule_applied"                      : 'Applied',
+      "rule_not_applied"                  : 'Not Applied',
+      "adding"                            : 'Adding...',
+      "removing"                          : 'Removing...',
+      "name_validation"                   : 'Name can not be blank.',
+      "verb_validation"                   : 'You must select at least one verb.',
+      "full_access"                       : 'Full Access',
+      "loading"                           : "Loading Role",
+      "add_header_org"                    : "Add Permission to",
+      "add_header_global"                 : "Add Global Permission",
+      "roles_summary"                     : "Please select Permissions to view and add permissions for this role or Users to see current users with this role.",
+      "roles_summary_readonly"            : "Please select Permissions to view permissions for this role or Users to see current users with this role.",
+      "users_summary"                     : "Click Add or Remove next to a user name to apply or remove them from role.",
+      "users_summary_readonly"            : "User assignments for this role",
+      "role_permissions_summary"          : "Global permissions allow you to create permissions that span all organizations, or choose a specific organization to apply permissions.",
+      "role_permissions_summary_readonly" : "Global permissions are permissions that span all organizations; however, organization permissions apply only to the organization they are associated with.",
+      "permissions_summary"               : "Click Add permission from the bar below to add a permission.",
+      "permissions_summary_readonly"      : "Permissions for this role.",
+      "permission_detail_summary"         : "Click edit permission from the bar below to edit the current permission.",
+      "permission_detail_readonly"        : "Details for the currently selected permission.",
+      "edit_role_details"                 : 'Edit Role Details',
+      'close_role_details'                : 'Close Role Details',
+      'all_types_selected'                : 'You have selected all resource types; this will grant full access to the organization. Press the Cancel button to select an individual resource type.',
+      "no_tags_for_type"                  : 'There are no tags for the resource type you have chosen.',
+      "no_permissions"                    : 'There are currently no permissions for this organization.  Please click Add Permission in the action bar below to add a permission to this organization.',
+      "no_global_permissions"             : 'There are currently no Global permissions for this role.  Please click Add Permission in the action bar below to add a Global permission.  A Global permission is one that cuts across all organizations.',
+      "name_colon": 'Name:',
+      "description_colon": 'Description:',
+      "permission_for_colon": 'Permission For:',
+      "verbs_colon": 'Verb(s):',
+      "on_colon": 'On:',
+    });
+    
+    var permissions = {
+      create_roles: true,
+      read_roles: true,
+      update_roles: true,
+      delete_roles: true
+    };
+  //]]&gt;
+</script>
+
+<script type="text/javascript" src="/katello/assets/notices.js?1340257794"></script><script>
+  //&lt;![CDATA[
+    $(document).ready(function(){
+      notices.setup_notices(120000);
+      notices.addNotices($.parseJSON( "{\"new_notices\":[]}"   ));
+    });
+  //]]&gt;
+</script>
+
+<!-- translations needed for jeditable -->
+<script>
+  //&lt;![CDATA[
+    localize({
+      "cancel": 'Cancel',
+      "upload": 'Upload',
+      "uploading": 'Uploading',
+      "clickToEdit": 'Click to edit',
+      "save": 'Save',
+      "saving": 'Saving...',
+      "close": 'Close'
+    });
+  //]]&gt;
+</script>
+
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="SijSP7r+BG4zpA7V/WYDxJS0djVICp8Nlliv3SbI7As=" name="csrf-token" />
+<script type="text/javascript">
+//&lt;![CDATA[
+var AUTH_TOKEN = "SijSP7r+BG4zpA7V/WYDxJS0djVICp8Nlliv3SbI7As=";
+//]]&gt;
+</script>
+
+
+<a id="toTop" href="#" style="display: none;"><span id="toTopHover"></span>To Top</a></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="980" height="902"></canvas></html>
